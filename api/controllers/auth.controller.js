@@ -10,8 +10,8 @@ const hashedPassword = bcryptjs.hashSync(password, 10);
    try{
     await newUser.save();
     res.status(201).json('user created')
-   }catch(err){
-    next(err);
+   }catch(error){
+    next(error);
    }
   
 };
