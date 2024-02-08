@@ -4,9 +4,9 @@ import { Outlet, Navigate } from 'react-router-dom'
 
 function PrivateRoute() {
 
-    const { Currentuser} = useSelector((state) => state.user)
+    const { currentUser } = useSelector((state) => state.user)
   return (
-    Currentuser ? <Outlet/> : <Navigate to={'/sign-in'}/>
+    currentUser ? <Outlet/> : <Navigate to={'/sign-in'}/>
   )
 }
 

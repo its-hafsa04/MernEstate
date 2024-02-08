@@ -14,7 +14,7 @@ try {
     }
         const updatedUser = await User.findByIdAndUpdate(req.params.id,{
             $set : {
-                username : req.body.name,
+                username : req.body.username,
                 email : req.body.email,
                 password : req.body.password,
                 avatar : req.body.avatar,
