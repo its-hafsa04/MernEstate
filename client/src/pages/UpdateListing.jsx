@@ -1,14 +1,14 @@
 import { useState, useEffect} from 'react'
 import { getDownloadURL, getStorage, ref, uploadBytesResumable } from 'firebase/storage';
 import { app } from '../firebase';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 export default function UpdateListing() {
   const {currentUser} = useSelector(state => state.user);
   const navigate = useNavigate();
   const [files, setFiles] = useState([]);
-
+  const params = useParams();
   const [formData, setFormData] = useState({
     imageUrls: [],
     name : '',
