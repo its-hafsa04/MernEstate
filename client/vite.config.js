@@ -8,7 +8,7 @@ export default defineConfig({
       '/api': {
         target: 'https://mern-estate-api-cyan.vercel.app',
         changeOrigin: true,
-        secure: false,
+        secure: true,
       },
     },
   },
